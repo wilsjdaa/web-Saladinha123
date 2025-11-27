@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <title>Site Aleatório</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            text-align: center;
+            padding: 40px;
+        }
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        #texto {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        #tempo {
+            margin-top: 40px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo-site">Título aleatório...</h1>
+
+    <button onclick="gerarTexto()">Gerar texto aleatório</button>
+
+    <p id="texto"></p>
+
+    <p id="tempo">Carregando...</p>
+
+    <script>
+        // Lista de títulos aleatórios
+        const titulos = [
+            "Eu te amo tantu camilleeeee",
+            "Hoje é um ótimo dia, meu amor!",
+            "Minha princesa tão lindaaa!",
+            "Hoje é um dia especial",
+            "todo dia é um misterio",
+            "Esse site é atualizado todo dia!",
+            "eu te amoo muitoooouuuu",
+            "Você todo dia tá mais linda!",
+            "vou viver melhorando esse link pra você meu amor!",
+            "camille minha princesa!",
+            "<3"
+        ];
+
+        const textos = [
+            "Eu te amoooo",
+            "Todo dia você tá me orgulhando mais!",
+            "estudei tanto pra te elogiar todo dia!",
+            "Parabéns, ta tão perfieta hoje!",
+            "Todo dia eu te amo maissss!",
+            "Esse codigo foi feito quando dos tinha 280 dias de namoro, significa 100 elaborando programação",
+            "futuramente terá 100 frases pra vc ver todo dia",
+            "meu amorrr!",
+            "<3"
+        ];
+
+        // Define o título aleatório ao carregar
+        document.getElementById("titulo-site").textContent = titulos[Math.floor(Math.random() * titulos.length)];
+
+        // Função para gerar texto aleatório
+        function gerarTexto() {
+            document.getElementById("texto").textContent = textos[Math.floor(Math.random() * textos.length)];
+        }
+
+        // Contador desde 12/02/2025
+        function atualizarTempo() {
+            const inicio = new Date("2025-02-12T00:00:00");
+            const agora = new Date();
+
+            const diff = agora - inicio;
+
+            const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutos = Math.floor((diff / (1000 * 60)) % 60);
+            const segundos = Math.floor((diff / 1000) % 60);
+
+            document.getElementById("tempo").textContent =
+                "Tempo desde 12/02/2025: " +
+                dias + "d " + horas + "h " + minutos + "m " + segundos + "s";
+        }
+
+        setInterval(atualizarTempo, 1000);
+        atualizarTempo();
+    </script>
+</body>
+</html>
+
+
