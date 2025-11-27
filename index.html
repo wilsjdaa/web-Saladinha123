@@ -11,6 +11,7 @@
             padding: 40px;
             color: white;
             position: relative;
+            font-size: 20px;
         }
 
         /* Corações nas laterais */
@@ -33,7 +34,7 @@
 
         button {
             padding: 12px 20px;
-            font-size: 16px;
+            font-size: 18px;
             cursor: pointer;
             margin-top: 20px;
             border-radius: 10px;
@@ -41,13 +42,52 @@
 
         #texto {
             margin-top: 20px;
-            font-size: 20px;
+            font-size: 22px;
         }
 
         #tempo {
             margin-top: 40px;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
+        }
+
+        #frase-final {
+            margin-top: 60px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* 📱 Ajustes para celular */
+        @media (max-width: 600px) {
+            body {
+                padding: 20px;
+                font-size: 22px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            button {
+                font-size: 20px;
+                padding: 14px 22px;
+            }
+
+            #texto {
+                font-size: 24px;
+            }
+
+            #tempo {
+                font-size: 22px;
+            }
+
+            #frase-final {
+                font-size: 26px;
+            }
+
+            .coracao {
+                font-size: 34px;
+            }
         }
     </style>
 </head>
@@ -123,13 +163,13 @@
         setInterval(atualizarTempo, 1000);
         atualizarTempo();
     </script>
-    
-<p id="frase-final" style="margin-top: 60px; font-size: 22px; font-weight: bold;">
-    𝒗𝒐𝒄ê é a razão do meu sorriso todo dia ❤️ 𝐚𝐬𝐬𝐢𝐧𝐚𝐝𝐨. 𝐰𝐢𝐥𝐥
-    Next update 01/12/2025.
-</p>
+
+    <p id="frase-final">
+        Você é a razão do meu sorriso todo dia ❤️
+    </p>
 
 </body>
 </html>
+
 
 
