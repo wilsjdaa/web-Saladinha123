@@ -6,20 +6,44 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #f2f2f2;
+            background: #6a0dad; /* Roxo */
             text-align: center;
             padding: 40px;
+            color: white;
+            position: relative;
         }
+
+        /* Corações nas laterais */
+        .coracao {
+            position: fixed;
+            font-size: 40px;
+            color: red;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+
+        #coracao-esq {
+            left: 20px;
+        }
+
+        #coracao-dir {
+            right: 20px;
+        }
+
         button {
             padding: 12px 20px;
             font-size: 16px;
             cursor: pointer;
             margin-top: 20px;
+            border-radius: 10px;
         }
+
         #texto {
             margin-top: 20px;
             font-size: 20px;
         }
+
         #tempo {
             margin-top: 40px;
             font-size: 18px;
@@ -28,6 +52,11 @@
     </style>
 </head>
 <body>
+
+    <!-- Corações laterais -->
+    <div id="coracao-esq" class="coracao">❤️</div>
+    <div id="coracao-dir" class="coracao">❤️</div>
+
     <h1 id="titulo-site">Título aleatório...</h1>
 
     <button onclick="gerarTexto()">Gerar texto aleatório</button>
@@ -65,11 +94,13 @@
         ];
 
         // Define o título aleatório ao carregar
-        document.getElementById("titulo-site").textContent = titulos[Math.floor(Math.random() * titulos.length)];
+        document.getElementById("titulo-site").textContent =
+            titulos[Math.floor(Math.random() * titulos.length)];
 
         // Função para gerar texto aleatório
         function gerarTexto() {
-            document.getElementById("texto").textContent = textos[Math.floor(Math.random() * textos.length)];
+            document.getElementById("texto").textContent =
+                textos[Math.floor(Math.random() * textos.length)];
         }
 
         // Contador desde 12/02/2025
@@ -92,7 +123,6 @@
         setInterval(atualizarTempo, 1000);
         atualizarTempo();
     </script>
+
 </body>
 </html>
-
-
