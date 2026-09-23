@@ -143,7 +143,7 @@
 
         // Contador desde 12/02/2025
         function atualizarTempo() {
-            const inicio = new Date("2025-02-12T00:00:00");
+            const inicio = new Date("2026-09-4T00:00:00");
             const agora = new Date();
 
             const diff = agora - inicio;
@@ -154,7 +154,7 @@
             const segundos = Math.floor((diff / 1000) % 60);
 
             document.getElementById("tempo").textContent =
-                "Tempo desde 12/02/2025: " +
+                "Tempo desde sexta feira, dia 4 de setembro de 2026.: " +
                 dias + "d " + horas + "h " + minutos + "m " + segundos + "s";
         }
 
